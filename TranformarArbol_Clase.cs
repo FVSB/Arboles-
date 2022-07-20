@@ -14,7 +14,7 @@ public static class Transform<Tin, Tout>
 
     }
 
-    public static (Queue<Tree<Tout>>, Queue<int>) Transformar<Tin, Tout>(IEnumerable<Tree<Tin>> Recorrido, Func<Tin, Tout> dele)
+    private static (Queue<Tree<Tout>>, Queue<int>) Transformar<Tin, Tout>(IEnumerable<Tree<Tin>> Recorrido, Func<Tin, Tout> dele)
     {
         var temp = new Queue<Tree<Tout>>();
         var count = new Queue<int>();
@@ -43,5 +43,10 @@ public static class Transform<Tin, Tout>
         }
         return root;
     }
+
+}
+
+public class Ipopo
+{
 
 }

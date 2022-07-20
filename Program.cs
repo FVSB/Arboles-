@@ -63,11 +63,14 @@ System.Console.WriteLine("####################");
 Func<int, int> dele = (x) => x * 2;
 
 var t = Transform<int, int>.Portal(qwerty, dele);
-
-foreach (var item in Recorridos.PreOrden(t))
+var x = Transform<int, string>.Portal(qwerty, (x) => x.ToString() + "!");
+foreach (var item in Recorridos.PreOrden(x))
 {
     System.Console.WriteLine(item.Value);
+
 }
+
+
 
 
 
