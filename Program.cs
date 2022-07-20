@@ -59,6 +59,16 @@ foreach (var item in Recorridos.InOrden(uno))
     System.Console.WriteLine(item.Value);
 }
 
+System.Console.WriteLine("####################");
+Func<int, int> dele = (x) => x * 2;
+
+var t = Transform<int, int>.Portal(qwerty, dele);
+
+foreach (var item in Recorridos.PreOrden(t))
+{
+    System.Console.WriteLine(item.Value);
+}
+
 
 
 
